@@ -16,7 +16,7 @@ export default function App() {
             Email: jlpritche@coastal.edu</Text>
           <Text style={styles.text} onPress={() => Linking.openURL('tel:8436165035')}>
             Phone: 843-616-5035</Text>
-          <Text style={styles.text} onPress={() => Linking.openURL('https://github.com/jlpritche/jlpritche_csci343_2026')}>
+          <Text style={styles.text} onPress={() => Linking.openURL('https://github.com/jlpritche')}>
             Find me on GitHub!</Text>
         </View>
       </View>
