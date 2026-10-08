@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "SandwichShopTest",
+    "slug": "SandwichShopTest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/sub.png",
+    "splash": {
+      "image": "./assets/images/sub.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/sub.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

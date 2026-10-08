@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "BicycleRepairShopApp",
+    "slug": "BicycleRepairShopApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/bicycle-shop.avif",
+    "splash": {
+      "image": "./assets/images/bicycle-shop.avif",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/bicycle-shop.avif"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
