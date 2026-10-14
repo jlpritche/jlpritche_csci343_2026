@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "HotelReservationTest",
+    "slug": "HotelReservationTest",
+    "version": "1.0.0",
+    "orientation": "auto",
+    "icon": "./assets/images/italy-splash.jpg",
+    "splash": {
+      "image": "./assets/images/italy-splash.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/italy-splash.jpg"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/italy-splash.jpg"
+    }
+  }
+}

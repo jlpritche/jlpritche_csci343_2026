@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "CampgroundReservationApp",
+    "slug": "CampgroundReservationApp",
+    "version": "1.0.0",
+    "orientation": "auto",
+    "icon": "./assets/images/campLogo.jpg",
+    "splash": {
+      "image": "./assets/images/campLogo.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/campLogo.jpg"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/campLogo.jpg"
+    }
+  }
+}
