@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "CampgroundTravelerTest",
+    "slug": "CampgroundTravelerTest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/camping-splash.jpg",
+    "splash": {
+      "image": "./assets/images/camping-splash.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/images/camping-splash.jpg"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/camping-splash.jpg"
+    }
+  }
+}
