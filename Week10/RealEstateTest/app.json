@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "RealEstateTest",
+    "slug": "RealEstateTest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/images/realEstateSplash.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-splash-screen",
+      "expo-status-bar"
+    ]
+  }
+}
