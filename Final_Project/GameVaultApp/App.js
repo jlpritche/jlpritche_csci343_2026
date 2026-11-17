@@ -11,25 +11,35 @@ import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import BacklogScreen from './screens/BacklogScreen';
 import GameDetailsScreen from './screens/GameDetailsScreen';
+import GlobalStyles from './constants/styles';
+import { G } from 'react-native-svg';
 
+// Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 
+// Create navigators
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
 
+// Bottom Tabs Navigator function
 function TabsNavigator() {
   return (
-    <Tabs.Navigator>
-      <Tabs.Screen 
-      name="Vault" 
-      component={HomeScreen}
-      options={{ 
-        headerShown: false,
-        tabBarIcon: ({ color, size }) => (
-          <FontAwesome6 name="vault" color={color} size={size} />
-        ),
-        tabBarLabel: 'Vault' 
-        }} />
+    <Tabs.Navigator
+    initialRouteName='Vault'
+    screenOptions={{
+      tabBarLabelVisibilityMode: true,
+      tabBarActiveBackgroundColor: GlobalStyles.tertiary2,
+      tabBarActiveTintColor: 'white',
+      tabBarInactiveBackgroundColor: GlobalStyles.primary,
+      tabBarInactiveTintColor: 'white',
+      tabBarLabelStyle: {
+        fontSize: 18,
+        fontFamily: 'Aldo'
+      },
+      tabBarStyle: {
+        backgroundColor: GlobalStyles.primary
+      }
+    }} >
       <Tabs.Screen 
       name="Backlog" 
       component={BacklogScreen}
@@ -40,6 +50,16 @@ function TabsNavigator() {
         ),
         tabBarLabel: 'Backlog' 
       }} />
+      <Tabs.Screen 
+      name="Vault" 
+      component={HomeScreen}
+      options={{ 
+        headerShown: false,
+        tabBarIcon: ({ color, size }) => (
+          <FontAwesome6 name="vault" color={color} size={size} />
+        ),
+        tabBarLabel: 'Vault' 
+        }} />
       <Tabs.Screen 
       name="Profile" 
       component={ProfileScreen}
@@ -55,10 +75,13 @@ function TabsNavigator() {
 }
 
 export default function App() {
+  // Load custom fonts
   const [fontsLoaded] = Font.useFonts({
     Aldo : require('./assets/fonts/AldotheApache.ttf'),
+    Pixel : require('./assets/fonts/Pixel-Digivolve.otf')
   });
 
+  // Hide splash screen once fonts are loaded
   useEffect(() => {
     if (fontsLoaded) {
       SplashScreen.hideAsync();
@@ -70,15 +93,24 @@ export default function App() {
   }
 
   return (
+    // Render main screen with stack navigation
     <>
     <StatusBar style="light" />
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='Home' >
         <Stack.Screen 
         name="Home" 
         component={TabsNavigator}
         options={{ headerShown: false }} />
-        <Stack.Screen name="GameDetails" component={GameDetailsScreen} />
+        <Stack.Screen 
+        name="GameDetails" 
+        component={GameDetailsScreen}
+        options={{
+          headerShown: true,
+          title: '',
+          headerTintColor: 'white',
+          headerStyle: { backgroundColor: GlobalStyles.primary }
+        }} />
       </Stack.Navigator>
     </NavigationContainer>
     </>
@@ -88,8 +120,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
